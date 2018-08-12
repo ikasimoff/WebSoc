@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{0CFCCCC8-2F56-44AF-BB5C-98389C23FE1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "Web\Web.csproj", "{0CFCCCC8-2F56-44AF-BB5C-98389C23FE1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaService", "InstaService\InstaService.csproj", "{C74B6FD6-A757-4A67-8512-0B0D62A80FA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib", "Lib\Lib.csproj", "{A4DBE9B2-23DD-44BC-8AD5-78768729B676}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{0CFCCCC8-2F56-44AF-BB5C-98389C23FE1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CFCCCC8-2F56-44AF-BB5C-98389C23FE1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CFCCCC8-2F56-44AF-BB5C-98389C23FE1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C74B6FD6-A757-4A67-8512-0B0D62A80FA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C74B6FD6-A757-4A67-8512-0B0D62A80FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C74B6FD6-A757-4A67-8512-0B0D62A80FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C74B6FD6-A757-4A67-8512-0B0D62A80FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4DBE9B2-23DD-44BC-8AD5-78768729B676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4DBE9B2-23DD-44BC-8AD5-78768729B676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4DBE9B2-23DD-44BC-8AD5-78768729B676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4DBE9B2-23DD-44BC-8AD5-78768729B676}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
