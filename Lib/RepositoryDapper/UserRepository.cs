@@ -22,12 +22,19 @@ namespace Lib.RepositoryDapper
             return qq;
         }
 
-        public IList<ShortUser> GetLogins(long fromId, long toId)
+        public List<ShortUser> GetLogins(long fromId, long toId)
         {
-            throw new NotImplementedException();
+            List<ShortUser> users = new List<ShortUser>();
+            users = _db.Query<ShortUser>(@"
+                                SELECT [User].[Login], [User].Id 
+                                FROM[User]
+                                WHERE
+                                [User].Id > " + fromId + @" AND[User].Id < " + toId)
+                                .ToList();
+            return users;
         }
 
-        public IList<ShortUser> GetLoginsNoPost(long fromId, long toId)
+        public List<ShortUser> GetLoginsNoPost(long fromId, long toId)
         {
             List<ShortUser> users = new List<ShortUser>();
             users = _db.Query<ShortUser>(@"

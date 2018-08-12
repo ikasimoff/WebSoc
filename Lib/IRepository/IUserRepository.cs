@@ -10,7 +10,7 @@ namespace Lib.IRepository
     interface IUserRepository
     {
         long GetCount();
-        IList<ShortUser> GetLogins(long fromId, long toId);
-        IList<ShortUser> GetLoginsNoPost(long fromId, long toId);
+        List<ShortUser> GetLogins(long fromId, long toId);
+        List<ShortUser> GetLoginsNoPost(long fromId, long toId);
     }
 }
