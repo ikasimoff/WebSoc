@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Web.Controllers
 {
-    public class AdminController : Controller
+    public class AdminInstaAcController : Controller
     {
         public IActionResult Index()
         {

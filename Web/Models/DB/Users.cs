@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Web.Models.DB
 {
-    public partial class Users
+    public partial class InstaUsers
     {
         public long Id { get; set; }
         [Required]

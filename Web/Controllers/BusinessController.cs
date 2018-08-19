@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Web.Data;
 using Web.Models.DB;
 
 namespace Web.Controllers
@@ -13,9 +14,9 @@ namespace Web.Controllers
     [Authorize(Roles = "business")]
     public class BusinessController : Controller
     {
-        private readonly DataContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public BusinessController(DataContext context)
+        public BusinessController(ApplicationDbContext context)
         {
             _context = context;
         }

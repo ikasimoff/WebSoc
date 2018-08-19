@@ -145,7 +145,7 @@ namespace Web
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                 .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver()); ;
 
-            services.AddSignalR();
+            //services.AddSignalR();
             services.AddKendo();
         }
 
