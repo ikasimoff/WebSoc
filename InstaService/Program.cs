@@ -9,6 +9,7 @@ using System.Drawing;
 using Lib.Models;
 using Lib.RepositoryDapper;
 using InstaService.Instagram;
+using System.ServiceModel;
 
 namespace InstaService
 {
@@ -22,11 +23,18 @@ namespace InstaService
         public static void Main(string[] args)
         {
             var sw = new Stopwatch();
-            users = new UserRepository().GetLoginsNoPost(1, 200000);
+            //users = new UserRepository().GetLoginsNoPost(1, 200000);
 
-            var irek = new Insta("dianarostova3", "йегрес111");
+            ServiceHost host = new ServiceHost(typeof(WCF.GetPosts));
+            host.Open();
+            Console.WriteLine("Service Hosted Sucessfully");
+            //Console.Read();
+
+            var irek = new Insta("pavelpetrov141", "петр777");
             irek.StartInstaAsync().GetAwaiter().GetResult();
-            irek.GetPosts("");
+            //irek.GetPosts("");
+
+            instants.Add(irek);
 
             #region LoopBenchmarcks
             //sw.Start();

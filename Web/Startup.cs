@@ -15,6 +15,8 @@ using Digillect.AspNetCore.Authentication.VKontakte;
 using Microsoft.AspNetCore.Authentication.OAuth;
 using System.Security.Claims;
 using Web.Models;
+using Web.Services;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace Web
 {
@@ -76,7 +78,7 @@ namespace Web
                 options.SlidingExpiration = true;
             });
 
-            //services.AddTransient<IEmailSender, EmailSender>();
+            services.AddTransient<IEmailSender, Services.EmailSender>();
 
             var auth = services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme);
 
@@ -150,16 +152,16 @@ namespace Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
+            //if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
             }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
-            }
+            //else
+            //{
+            //    app.UseExceptionHandler("/Home/Error");
+            //    app.UseHsts();
+            //}
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

@@ -1,0 +1,77 @@
+﻿body {
+    position: relative;
+    min-height: 100%;
+    top: 0px;
+    background: #005ca1 /*url(/OwnTemplate/images/bg.png) repeat-x center bottom*/;
+    font-size: 13px;
+    font-style: normal;
+    color: #4e4e4e;
+    font-family: "Open Sans", sans-serif;
+}
+#headerimage{
+    width: 100%;
+}
+#header{
+    margin-top: -120px!important;
+}
+#sidebar img{
+    max-width:100%;
+    max-height: 90%;
+}
+table td img {
+    max-width: 100%;
+    max-height: 90%;
+}
+table td {
+    text-align: center;
+    width: 14% !important;
+    display: inline-block;
+}
+
+.container2{
+    width: 90%;
+    display: block;
+    margin:0 auto;
+}
+.p-b-100{
+    padding: 30px 0;
+}
+
+#mainMenu {
+    float: left!important;
+}
+
+.nav-main-menu-responsive {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+}
+
+.nav-main-menu-responsive button.lines-button span {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+@media (max-width: 991px) {
+    #header.header-modern {
+        margin: 0;
+        width: 100%;
+        border-radius: 0px;
+        margin-top: -34px !important;
+    }
+
+    #header.header-transparent, #header.header-light-transparent {
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .lines-button {
+        padding: 0; 
+    }
+}
+
+
+.form-control::-webkit-input-placeholder {
+    color: black;
+}
+

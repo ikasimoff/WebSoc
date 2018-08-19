@@ -69,6 +69,7 @@ namespace InstaService.Instagram
                 .Build();
 
             var loginResult = await InstaApi.LoginAsync();
+            Console.WriteLine("Login " + Login + " is " + loginResult.Info);
             if (loginResult.Succeeded == true)
             {
                 IsOnline = true;

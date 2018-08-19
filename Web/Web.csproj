@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="AspNet.Security.OAuth.Vkontakte" Version="2.0.0" />
+    <PackageReference Include="BuildBundlerMinifier" Version="2.8.391" />
     <PackageReference Include="Digillect.AspNetCore.Authentication.VKontakte" Version="2.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.0.2" />
@@ -15,12 +16,24 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" PrivateAssets="All" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.4.*" />
     <PackageReference Include="Telerik.UI.for.AspNet.Core" Version="2018.2.516" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />    
   </ItemGroup>
 
   <ItemGroup>
     <None Include="wwwroot\js\signalr.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Identity\Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
   </ItemGroup>
   
 </Project>

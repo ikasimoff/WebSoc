@@ -1,0 +1,83 @@
+﻿@model Web.Models.DB.Logins
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>Logins</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Login" class="control-label"></label>
+                <input asp-for="Login" class="form-control" />
+                <span asp-validation-for="Login" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountId" class="control-label"></label>
+                <input asp-for="AccountId" class="form-control" />
+                <span asp-validation-for="AccountId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsBlocked" /> @Html.DisplayNameFor(model => model.IsBlocked)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastUse" class="control-label"></label>
+                <input asp-for="LastUse" class="form-control" />
+                <span asp-validation-for="LastUse" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="UseForParsing" /> @Html.DisplayNameFor(model => model.UseForParsing)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="UseProxy" class="control-label"></label>
+                <input asp-for="UseProxy" class="form-control" />
+                <span asp-validation-for="UseProxy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProxyIp" class="control-label"></label>
+                <input asp-for="ProxyIp" class="form-control" />
+                <span asp-validation-for="ProxyIp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastUpdate" class="control-label"></label>
+                <input asp-for="LastUpdate" class="form-control" />
+                <span asp-validation-for="LastUpdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	
+	
+	<link rel="shortcut icon" href="images/favicon.png">
+	<title>themelock.com - POLO | The Multi-Purpose HTML5 Template</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="vendor/fontawesome/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+	<link href="vendor/animateit/animate.min.css" rel="stylesheet">
+
+	<!-- Vendor css -->
+	<link href="vendor/owlcarousel/owl.carousel.css" rel="stylesheet">
+	<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+	<!-- Template base -->
+	<link href="css/theme-base.css" rel="stylesheet">
+
+	<!-- Template elements -->
+	<link href="css/theme-elements.css" rel="stylesheet">	
+	
+<!-- Responsive classes -->
+	<link href="css/responsive.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->	
+
+
+	<!-- Template color -->
+	<link href="css/color-variations/blue.css" rel="stylesheet" type="text/css" media="screen" title="blue">
+
+	<!-- LOAD GOOGLE FONTS -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,800,700,600%7CRaleway:100,300,600,700,800" rel="stylesheet" type="text/css" />
+
+	<!-- CSS CUSTOM STYLE -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css" media="screen" />
+
+    <!--VENDOR SCRIPT-->
+    <script src="vendor/jquery/jquery-1.11.2.min.js"></script>
+    <script src="vendor/plugins-compressed.js"></script>
+
+</head>
+
+<body class="wide">
+	
+
+	<!-- WRAPPER -->
+	<div class="wrapper">
+
+		<!-- SECTION IMAGE FULLSCREEN -->
+		<section class="section-video text-center background-image p-t-200 p-b-200 text-light" data-vide-bg="homepages/coming-soon/video/Puzzling" data-vide-options="position: 0% 50%">
+			<div class="background-overlay"></div>
+			<div class="container">
+				<div data-animation="fadeInUp">
+					<h1>We're getting ready to launch in</h1>
+				</div>
+
+
+				<div class="countdown rectangle countdown-light m-b-40" data-countdown="2016/09/19 12:34:56" data-animation="fadeInUp"></div>
+
+				<div data-animation-delay="600" data-animation="fadeInUp">
+
+					<p class="lead">Our website is under construction, we are working very hard to give you the best experience on our new web site.</p>
+				</div>
+				<hr class="space">
+				<div data-animation-delay="600" data-animation="fadeInUp">
+					<div class="widget clearfix widget-newsletter">
+                        <form id="widget-subscribe-form" action="include/subscribe-form.php" role="form" method="post" class="form-inline">
+                            <small>Stay ready, we`re launching soon</small>
+                            <div class="input-group input-lg">
+                                <input type="email" aria-required="true" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+                                <span class="input-group-btn input-large">
+                  <button type="submit" id="widget-subscribe-submit-button" class="btn btn-danger">Subscribe</button>
+                  </span> </div>
+                        </form>
+                        <script type="text/javascript">
+                            jQuery("#widget-subscribe-form").validate({
+                                submitHandler: function(form) {
+                                    jQuery(form).ajaxSubmit({
+                                        dataType: 'json',
+                                        success: function(text) {
+                                            if (text.response == 'success') {
+                                                $.notify({
+                                                    message: "You have successfully subscribed to our mailing list."
+                                                }, {
+                                                    type: 'success'
+                                                });
+                                                $(form)[0].reset();
+
+                                            } else {
+                                                $.notify({
+                                                    message: text.message
+                                                }, {
+                                                    type: 'warning'
+                                                });
+                                            }
+                                        }
+                                    });
+                                }
+                            });
+
+                        </script>
+                    </div>
+				</div>
+
+
+				<hr class="space">
+				<div class="text-light" data-animation-delay="800" data-animation="fadeInUp">POLO | The Multi-Purpose HTML5 Template. © 2015 All Rights Reserved. <a href="http://www.inspiro-media.com">INSPIRO</a></div>
+			</div>
+
+		</section>
+		<!-- END: SECTION IMAGE FULLSCREEN -->
+
+	</div>
+	<!-- END: WRAPPER -->
+
+	<!-- GO TOP BUTTON -->
+	<a class="gototop gototop-button" href="#"><i class="fa fa-chevron-up"></i></a>
+
+	<!-- Theme Base, Components and Settings -->
+	<script src="js/theme-functions.js"></script>
+
+	<!-- Custom js file -->
+	<script src="js/custom.js"></script>
+
+
+
+</body>
+
+</html>
