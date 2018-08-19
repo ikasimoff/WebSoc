@@ -31,8 +31,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">User</a></li>
                     <li><a asp-area="" asp-controller="Business" asp-action="Index">Business</a></li>
+                    <li><a asp-area="" asp-controller="Ads" asp-action="Index">Advertising</a></li>
                 </ul>
                 <partial name="_LoginPartial" />
             </div>
@@ -43,10 +44,10 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
+        @*<hr />
         <footer>
             <p>&copy; 2018 - Web</p>
-        </footer>
+        </footer>*@
     </div>
 
     <environment include="Development">
