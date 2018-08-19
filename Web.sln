@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaService", "InstaServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib", "Lib\Lib.csproj", "{A4DBE9B2-23DD-44BC-8AD5-78768729B676}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstagramApiSharp", "InstagramApiSharp\InstagramApiSharp.csproj", "{36B66645-DE1B-4248-A7F1-C7D62911B570}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A4DBE9B2-23DD-44BC-8AD5-78768729B676}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4DBE9B2-23DD-44BC-8AD5-78768729B676}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4DBE9B2-23DD-44BC-8AD5-78768729B676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B66645-DE1B-4248-A7F1-C7D62911B570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B66645-DE1B-4248-A7F1-C7D62911B570}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B66645-DE1B-4248-A7F1-C7D62911B570}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B66645-DE1B-4248-A7F1-C7D62911B570}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

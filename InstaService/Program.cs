@@ -8,18 +8,26 @@ using System.Threading.Tasks;
 using System.Drawing;
 using Lib.Models;
 using Lib.RepositoryDapper;
+using InstaService.Instagram;
 
 namespace InstaService
 {
     public static class Program
     {
         public static List<ShortUser> users;
+        public static TaskFactory tasks = new TaskFactory();
+        public static List<Insta> instants = new List<Insta>();
+
 
         public static void Main(string[] args)
         {
             var sw = new Stopwatch();
-            
             users = new UserRepository().GetLoginsNoPost(1, 200000);
+
+            var irek = new Insta("dianarostova3", "йегрес111");
+            irek.StartInstaAsync().GetAwaiter().GetResult();
+            irek.GetPosts("");
+
             #region LoopBenchmarcks
             //sw.Start();
             // 22.5 ms
