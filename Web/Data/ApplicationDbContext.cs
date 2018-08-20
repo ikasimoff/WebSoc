@@ -119,6 +119,7 @@ namespace Web.Data
         public virtual DbSet<HightLights> HightLights { get; set; }
         public virtual DbSet<LoginChangeLog> LoginChangeLog { get; set; }
         public virtual DbSet<Logins> Logins { get; set; }
+        public virtual DbSet<LoginsGroups> LoginsGroups { get; set; }
         public virtual DbSet<Markers> Markers { get; set; }
         public virtual DbSet<Messages> Messages { get; set; }
         public virtual DbSet<Posts> Posts { get; set; }

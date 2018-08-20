@@ -9,11 +9,11 @@ using Web.Data;
 
 namespace Web.Controllers
 {
-    public class AdminInstaTasksController : Controller
+    public class AdminInstaLoginsController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public AdminInstaTasksController(ApplicationDbContext context)
+        public AdminInstaLoginsController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -25,9 +25,9 @@ namespace Web.Controllers
         }
 
 
-        public ActionResult Tasks_Read([DataSourceRequest] DataSourceRequest request)
+        public ActionResult Logins_Read([DataSourceRequest] DataSourceRequest request)
         {
-            var data = _context.Tasks.ToDataSourceResult(request);
+            var data = _context.Logins.ToDataSourceResult(request);
             return Json(data);
         }
     }

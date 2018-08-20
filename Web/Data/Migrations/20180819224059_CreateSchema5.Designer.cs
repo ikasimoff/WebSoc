@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Web.Data;
 
 namespace Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180819224059_CreateSchema5")]
+    partial class CreateSchema5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -400,8 +402,6 @@ namespace Web.Data.Migrations
                         .IsRequired()
                         .HasMaxLength(50);
 
-                    b.Property<long?>("LoginsGroupId");
-
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasMaxLength(50);
@@ -546,38 +546,6 @@ namespace Web.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<long>("AccountId");
-
-                    b.Property<string>("CommentText");
-
-                    b.Property<string>("CommentedPostId");
-
-                    b.Property<DateTime>("CreateDate")
-                        .HasColumnType("datetime");
-
-                    b.Property<string>("DirectText");
-
-                    b.Property<string>("SQL")
-                        .IsRequired();
-
-                    b.Property<int>("SelectedCount");
-
-                    b.Property<string>("SelectedIds");
-
-                    b.Property<string>("SelectedIdsComment");
-
-                    b.Property<string>("SelectedIdsDirect");
-
-                    b.Property<string>("SelectedIdsDirectLikes");
-
-                    b.Property<string>("SelectedIdsFollow");
-
-                    b.Property<DateTime?>("Start")
-                        .HasColumnType("datetime");
-
-                    b.Property<DateTime?>("Stop")
-                        .HasColumnType("datetime");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(500);
@@ -585,30 +553,6 @@ namespace Web.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tasks");
-                });
-
-            modelBuilder.Entity("Web.Models.LoginsGroups", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<long>("AccountId");
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(50);
-
-                    b.Property<long?>("LoginsGroupId");
-
-                    b.Property<long>("TaskId");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(50);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("LoginsGroups");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

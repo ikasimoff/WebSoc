@@ -8,6 +8,7 @@ namespace Web.Models.DB
     public partial class Logins
     {
         public long Id { get; set; }
+        public long? LoginsGroupId { get; set; }
         [Required]
         [StringLength(50)]
         public string Login { get; set; }
@@ -25,5 +26,11 @@ namespace Web.Models.DB
         public string Description { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime? LastUpdate { get; set; }
+        [StringLength(50)]
+        public string Email { get; set; }
+        [StringLength(50)]
+        public string EmailPassword { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime? RegDate { get; set; }
     }
 }

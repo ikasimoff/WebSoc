@@ -1,0 +1,139 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<!-- BEGIN PAGE BAR -->
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <a href="/Admin">Дашборд</a>
+            <i class="fa fa-circle"></i>
+        </li>
+       
+    </ul>
+    <div class="page-toolbar">
+        <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm" data-container="body" data-placement="bottom" data-original-title="Change dashboard date range">
+            <i class="icon-calendar"></i>&nbsp;
+            <span class="thin uppercase hidden-xs"></span>&nbsp;
+            <i class="fa fa-angle-down"></i>
+        </div>
+    </div>
+</div>
+<!-- END PAGE BAR -->
+<!-- BEGIN PAGE TITLE-->
+<h3 class="page-title">
+    Последние метрики
+    <small>Данные за 24 часа</small>
+</h3>
+<!-- END PAGE TITLE-->
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="dashboard-stat2 ">
+            <div class="display">
+                <div class="number">
+                    <h3 class="font-green-sharp">
+                        <span data-counter="counterup" data-value="96">0</span>
+                        <small class="font-green-sharp">шт</small>
+                    </h3>
+                    <small>Работает инстанций</small>
+                </div>
+                <div class="icon">
+                    <i class="icon-pie-chart"></i>
+                </div>
+            </div>
+            <div class="progress-info">
+                <div class="progress">
+                    <span style="width: 76%;" class="progress-bar progress-bar-success green-sharp">
+                        <span class="sr-only">76% progress</span>
+                    </span>
+                </div>
+                <div class="status">
+                    <div class="status-title"> progress </div>
+                    <div class="status-number"> 76% </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="dashboard-stat2 ">
+            <div class="display">
+                <div class="number">
+                    <h3 class="font-red-haze">
+                        <span data-counter="counterup" data-value="21349">18000</span>
+                    </h3>
+                    <small>Новых аккаунтов</small>
+                </div>
+                <div class="icon">
+                    <i class="icon-like"></i>
+                </div>
+            </div>
+            <div class="progress-info">
+                <div class="progress">
+                    <span style="width: 85%;" class="progress-bar progress-bar-success red-haze">
+                        <span class="sr-only">85% change</span>
+                    </span>
+                </div>
+                <div class="status">
+                    <div class="status-title"> change </div>
+                    <div class="status-number"> 85% </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="dashboard-stat2 ">
+            <div class="display">
+                <div class="number">
+                    <h3 class="font-blue-sharp">
+                        <span data-counter="counterup" data-value="285867"></span>
+                    </h3>
+                    <small>Всего аккаунтов</small>
+                </div>
+                <div class="icon">
+                    <i class="icon-basket"></i>
+                </div>
+            </div>
+            <div class="progress-info">
+                <div class="progress">
+                    <span style="width: 45%;" class="progress-bar progress-bar-success blue-sharp">
+                        <span class="sr-only">45% grow</span>
+                    </span>
+                </div>
+                <div class="status">
+                    <div class="status-title"> grow </div>
+                    <div class="status-number"> 45% </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="dashboard-stat2 ">
+            <div class="display">
+                <div class="number">
+                    <h3 class="font-purple-soft">
+                        <span data-counter="counterup" data-value="12760"></span>
+                    </h3>
+                    <small>ОЗУ</small>
+                </div>
+                <div class="icon">
+                    <i class="icon-user"></i>
+                </div>
+            </div>
+            <div class="progress-info">
+                <div class="progress">
+                    <span style="width: 87%;" class="progress-bar progress-bar-success purple-soft">
+                        <span class="sr-only">86% change</span>
+                    </span>
+                </div>
+                <div class="status">
+                    <div class="status-title"> change </div>
+                    <div class="status-number"> 87% </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

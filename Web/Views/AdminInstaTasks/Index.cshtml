@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Рекламные Кампании</h2>
+
+@(Html.Kendo().Grid<Web.Models.DB.Tasks>()
+                        .Name("grid")
+                        .Columns(columns =>
+                        {
+                            columns.Bound(c => c.AccountId).Width(140);
+                            columns.Bound(c => c.Title).Width(140);
+                            columns.Bound(c => c.SQL).Width(140);
+                            columns.Bound(c => c.Id).Title("Инструменты").ClientTemplate("<a href='" + @Url.Action("Details", "AdminInstaLogins", new { id = "#=Id#" }) + "' class='btn btn-primary'><i class='fa fa-eye'></i> подробнее</a>").Width(140);
+
+                        })
+                        .HtmlAttributes(new { style = "height: 70vh;" })
+                        .Scrollable()
+                        .Groupable()
+                        .Sortable()
+                        .Editable(ed => ed.Mode(GridEditMode.PopUp))
+                        .Pageable(pageable => pageable
+                        .Refresh(true)
+                        .PageSizes(true)
+                        .ButtonCount(5))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("Tasks_Read", "AdminInstaTasks"))
+                    )
+)
